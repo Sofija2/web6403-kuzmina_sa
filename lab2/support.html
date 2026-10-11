@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поддержка — Scent of Character</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="main-header">
+        <h1>Scent of Character</h1>
+        <p class="tagline">Подборка парфюма, вдохновлённая любимыми героями</p>
+        <nav class="main-nav">
+            <a href="index.html">Главная</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="support.html" class="active">Поддержка</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="page-title">Поддержка и контакты</h2>
+        <p class="page-subtitle">
+            Не нашли своего героя? Хотите предложить аромат? 
+            Напишите нам — мы открыты к идеям.
+        </p>
+
+        <section class="contact-form-section">
+            <h3>Написать нам</h3>
+            <form action="mailto:sofijasamara@gmail.com" method="post" enctype="text/plain" class="contact-form">
+                <label for="name">Ваше имя</label>
+                <input type="text" id="name" name="name" placeholder="Как к вам обращаться?" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="exemple@exemple.com" required>
+
+                <label for="character">Какого персонажа хотите добавить?</label>
+                <input type="text" id="character" name="character" placeholder="Имя персонажа">
+
+                <label for="message">Сообщение</label>
+                <textarea id="message" name="message" rows="5" placeholder="Ваш комментарий..." required></textarea>
+
+                <button type="submit" class="btn">Отправить</button>
+            </form>
+        </section>
+
+        <section class="contacts">
+            <h3>Другие способы связи</h3>
+            <ul class="contact-list">
+                <li><span class="label">Email:</span> <a href="mailto:sofijasamara@gmail.com">sofijasamara@gmail.com</a></li>
+                <li><span class="label">Telegram:</span> @pupupow127</li>
+                <li><span class="label">Город:</span> Samara</li>
+            </ul>
+        </section>
+
+        <section class="faq">
+            <h3>Частые вопросы</h3>
+            <dl class="faq-list">
+                <dt>Можно ли использовать ваши подборки для покупки?</dt>
+                <dd>Да, это рекомендации. Но вкусы субъективны — лучше тестировать на коже.</dd>
+
+                <dt>Вы продаёте парфюм?</dt>
+                <dd>Нет, это учебный проект. Мы только вдохновляем.</dd>
+
+                <dt>Как предложить своего персонажа?</dt>
+                <dd>Через форму выше или в Telegram.</dd>
+            </dl>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <p>© 2026 Scent of Character. Учебный проект.</p>
+        <p>Связь: <a href="mailto:sofijasamara@gmail.com">sofijasamara@gmail.com</a></p>
+    </footer>
+
+</body>
+</html>
