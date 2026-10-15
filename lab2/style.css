@@ -8,7 +8,7 @@
     /* акцентные цвета */
     --accent:        #8b0000;
     --accent-bright: #b81218;
-    --accent-table:  #ff2b2b;
+    --accent-light:  #ff2b2b;
 
     /* цвета текста */
     --text:          #f0f0f4;
@@ -148,7 +148,7 @@ a {
 }
 
 .hero-eyebrow {
-    color: var(--accent-table);
+    color: var(--accent-light);
     font-size: 14px;
     text-transform: uppercase;
     font-weight: bold;
@@ -199,7 +199,7 @@ a {
     display: block;
     font-family: Georgia, "Times New Roman", serif;
     font-size: 36px;
-    color: var(--accent-table);
+    color: var(--accent-light);
     margin-bottom: 14px;
 }
 
@@ -210,7 +210,7 @@ a {
 }
 
 .featured-fragrance {
-    color: var(--accent-table);
+    color: var(--accent-light);
     padding-top: 14px;
     border-top: 1px solid var(--border);
     margin-bottom: 0;
@@ -223,7 +223,7 @@ a {
     text-align: center;
     padding: 40px 25px;
     border-top: 1px solid var(--border);
-    border-bottom: 1px solid #35353c;
+    border-bottom: 1px solid var(--border);
 }
 
 .quote-text {
@@ -235,7 +235,7 @@ a {
 }
 
 .quote-author {
-    color: var(--accent-table);
+    color: var(--accent-light);
     font-size: 14px;
     text-transform: uppercase;
     font-weight: bold;
@@ -277,7 +277,7 @@ a {
 
 .character-source {
     text-align: center;
-    color: var(--accent-table);
+    color: var(--accent-light);
     font-style: italic;
     margin-bottom: 30px;
 }
@@ -327,7 +327,7 @@ a {
 
 .scent-table th {
     background-color: var(--bg);
-    color: var(--accent-table);
+    color: var(--accent-light);
     text-align: left;
     width: 30%;
     font-weight: bold;
@@ -372,7 +372,7 @@ a {
     margin-top: 18px;
     margin-bottom: 6px;
     font-weight: bold;
-    color: var(--accent-table);
+    color: var(--accent-light);
 }
 
 .contact-form input,
@@ -403,7 +403,7 @@ a {
 
 .contact-list .label {
     font-weight: bold;
-    color: var(--accent-table);
+    color: var(--accent-light);
     display: inline-block;
     width: 110px;
 }
