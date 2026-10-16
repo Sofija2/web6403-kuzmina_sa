@@ -39,11 +39,6 @@
 - блок с другими способами связи;
 - блок FAQ (частые вопросы).
 
-### Технологии
-
-- HTML5 (семантические теги: `header`, `nav`, `main`, `section`, `article`, `figure`, `figcaption`, `footer`);
-- CSS3 (Flexbox, Grid, CSS-переменные, `radial-gradient`, `transition`, `box-shadow`, media queries);
-- Внешний шрифт через `font-family` fallback (Inter / system-ui).
 
 
 
