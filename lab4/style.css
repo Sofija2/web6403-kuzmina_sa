@@ -1,0 +1,525 @@
+:root {
+    --bg:            #17171a;
+    --bg-alt:        #1e1e22;
+    --panel:         #232328;
+    --border:        #35353c;
+    --border-2:      #47474f;
+
+    /* акцентные цвета */
+    --accent:        #8b0000;
+    --accent-bright: #b81218;
+    --accent-table:  #ff2b2b;
+    --accent-glow:   rgba(184, 18, 24, 0.55);
+    --shadow-dark:   rgba(0, 0, 0, 0.45);
+
+    /* цвета текста */
+    --text:          #f0f0f4;
+    --text-soft:     #c4c4cc;
+    --text-muted:    #9a9aa4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    background-color: var(--bg);
+    color: var(--text-soft);
+    padding: 0 24px;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--text);
+    font-weight: normal;
+    margin-bottom: 16px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+a {
+    color: var(--accent-bright);
+    text-decoration: none;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 0 8px var(--accent-glow);
+    }
+    50% {
+        box-shadow: 0 0 22px var(--accent-glow);
+    }
+}
+
+
+main {
+    animation: fadeInUp 0.7s ease-out;
+}
+
+/* ============================================
+   ШАПКА И НАВИГАЦИЯ
+   ============================================ */
+
+#main-header {
+    text-align: center;
+    padding: 45px 0 30px;
+    margin-bottom: 50px;
+    border-bottom: 2px solid var(--accent);
+}
+
+#main-header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-style: italic;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    display: inline-block;
+    padding: 12px 32px;
+    font-weight: bold;
+    color: var(--text-soft);
+    border: 1px solid var(--border-2);
+    border-radius: 30px;
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.main-nav a:hover {
+    border-color: var(--accent-bright);
+    color: var(--text);
+}
+
+.main-nav a.active {
+    color: var(--text);
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+/* ============================================
+   КНОПКИ И ЗАГОЛОВКИ
+   ============================================ */
+
+.btn {
+    display: inline-block;
+    padding: 16px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text);
+    background-color: var(--accent);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    animation: glowPulse 2.6s ease-in-out infinite;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.btn:hover {
+    background-color: var(--accent-bright);
+    transform: translateY(-2px);
+}
+
+.section-title,
+.page-title {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.section-subtitle,
+.page-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 45px;
+}
+
+/* ============================================
+   index.html (FLEXBOX)
+   ============================================ */
+
+.hero-split {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto 70px;
+}
+
+.hero-text,
+.hero-image {
+    flex: 1 1 400px;
+}
+
+.hero-image img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid var(--border-2);
+}
+
+.hero-eyebrow {
+    color: var(--accent-table);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 14px;
+    padding-left: 12px;
+    border-left: 3px solid var(--accent);
+}
+
+.hero-text h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    margin-bottom: 28px;
+}
+
+/* Избранные карточки и шаги */
+.featured,
+.how-it-works {
+    max-width: 1100px;
+    margin: 0 auto 70px;
+}
+
+.featured-grid,
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.featured-card,
+.step {
+    flex: 1 1 230px;
+    background-color: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 28px 24px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-card:hover,
+.step:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-bright);
+    box-shadow: 0 10px 24px var(--shadow-dark);
+}
+
+.steps {
+    text-align: center;
+}
+
+.featured-number,
+.step-number {
+    display: block;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 36px;
+    color: var(--accent-table);
+    margin-bottom: 14px;
+}
+
+.featured-source {
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 16px;
+}
+
+.featured-fragrance {
+    color: var(--accent-table);
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+    margin-bottom: 0;
+}
+
+/* Цитата и нижний блок призыва к действию */
+.quote-block {
+    max-width: 800px;
+    margin: 0 auto 70px;
+    text-align: center;
+    padding: 40px 25px;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.quote-text {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 26px;
+    font-style: italic;
+    color: var(--text);
+    margin-bottom: 14px;
+}
+
+.quote-author {
+    color: var(--accent-table);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.cta {
+    text-align: center;
+    padding: 50px 30px;
+    background-color: var(--panel);
+    border: 1px solid var(--border-2);
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.cta p {
+    margin-bottom: 28px;
+}
+
+/* ============================================
+   catalog.html (CSS GRID)
+   ============================================ */
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+    gap: 32px;
+    max-width: 1300px;
+    margin: 0 auto 60px;
+}
+
+.character-card {
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    background-color: var(--panel);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 32px 26px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.character-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-bright);
+    box-shadow: 0 12px 28px var(--shadow-dark);
+}
+
+.character-name {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+.character-source {
+    text-align: center;
+    color: var(--accent-table);
+    font-style: italic;
+    margin-bottom: 24px;
+}
+
+.image-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.image-row figure {
+    text-align: center;
+}
+
+.image-row img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--border-2);
+}
+
+.image-row figcaption {
+    margin-top: 8px;
+    color: var(--text-soft);
+    font-size: 16px;
+}
+
+/* Таблица аромата */
+.scent-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    background-color: var(--bg-alt);
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+}
+
+.scent-table th,
+.scent-table td {
+    border: 1px solid var(--border);
+    padding: 12px 16px;
+}
+
+.scent-table th {
+    background-color: var(--bg);
+    color: var(--accent-table);
+    text-align: left;
+    width: 34%;
+    font-weight: bold;
+}
+
+.scent-table td {
+    color: var(--text);
+}
+
+.align-left   { text-align: left; }
+.align-center { text-align: center; }
+.align-right  { text-align: right; }
+
+/* ============================================
+   support.html
+   ============================================ */
+
+.contact-form-section,
+.contacts,
+.faq {
+    max-width: 750px;
+    margin: 0 auto 40px;
+    background-color: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 36px 32px;
+}
+
+.contact-form-section h3,
+.contacts h3,
+.faq h3 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--accent);
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: var(--accent-table);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    background-color: var(--bg-alt);
+    border: 1px solid var(--border-2);
+    border-radius: 6px;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.checkbox-row input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent-bright);
+    cursor: pointer;
+}
+
+.checkbox-row label {
+    margin: 0;
+    font-weight: normal;
+    color: var(--text-soft);
+    cursor: pointer;
+}
+
+.contact-form .btn {
+    margin-top: 24px;
+    width: 100%;
+}
+
+.form-status {
+    margin-top: 16px;
+    text-align: center;
+    color: var(--accent-table);
+    font-style: italic;
+}
+
+.contact-list {
+    list-style: none;
+}
+
+.contact-list li {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.contact-list .label {
+    font-weight: bold;
+    color: var(--accent-table);
+    display: inline-block;
+    width: 110px;
+}
+
+.faq-list dt {
+    font-weight: bold;
+    color: var(--text);
+    margin-top: 18px;
+    margin-bottom: 6px;
+}
+
+.faq-list dd {
+    color: var(--text-muted);
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+}
+
+/* ============================================
+   НИЗ САЙТА
+   ============================================ */
+
+#main-footer {
+    text-align: center;
+    padding: 35px 0;
+    border-top: 1px solid var(--border);
+    margin-top: 60px;
+    color: var(--text-muted);
+    font-size: 16px;
+}
