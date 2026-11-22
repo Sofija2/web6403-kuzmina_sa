@@ -21,18 +21,18 @@
     <main>
         <h2 class="page-title">Поддержка и контакты</h2>
         <p class="page-subtitle">
-            Не нашли своего героя? Хотите предложить аромат? 
+            Не нашли своего героя? Хотите предложить аромат?
             Напишите нам — мы открыты к идеям.
         </p>
 
         <section class="contact-form-section">
             <h3>Написать нам</h3>
-            <form action="mailto:sofijasamara@gmail.com" method="post" enctype="text/plain" class="contact-form">
+            <form id="support-form" class="contact-form">
                 <label for="name">Ваше имя</label>
                 <input type="text" id="name" name="name" placeholder="Как к вам обращаться?" required>
 
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="exemple@exemple.com" required>
+                <input type="email" id="email" name="email" placeholder="example@example.com" required>
 
                 <label for="character">Какого персонажа хотите добавить?</label>
                 <input type="text" id="character" name="character" placeholder="Имя персонажа">
@@ -40,7 +40,13 @@
                 <label for="message">Сообщение</label>
                 <textarea id="message" name="message" rows="5" placeholder="Ваш комментарий..." required></textarea>
 
+                <div class="checkbox-row">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent">Согласие на обработку данных</label>
+                </div>
+
                 <button type="submit" class="btn">Отправить</button>
+                <p id="form-status" class="form-status"></p>
             </form>
         </section>
 
@@ -73,5 +79,6 @@
         <p>Связь: <a href="mailto:sofijasamara@gmail.com">sofijasamara@gmail.com</a></p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
